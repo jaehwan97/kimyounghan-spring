@@ -24,3 +24,28 @@
 |주차| 강의명             |섹션|
 |--|-----------------|--|
 |1주차| 스프링 핵심 원리 - 기본편 |섹션 1. 객체 지향 설계와 스프링 <br/>~ 섹션 3. 스프링 핵심 원리 이해2 - 객체 지향 원리 적용|
+
+   
+## 커밋 규칙
+
+1. 본인의 저장소로 Fork 합니다.
+2. Fork로 생성한 자신의 로컬 저장소를 clone합니다.
+3. 원격 저장소를 확인합니다.
+   ```
+   git remote -v
+
+   origin  https://github.com/{본인 계정}/kimyounghan-spring.git (fetch)
+   origin  https://github.com/{본인 계정}/kimyounghan-spring.git (push)
+   ```
+ 4. upstream으로 원본 저장소를 등록합니다.
+    ```
+    git remote add upstream https://github.com/inflearn-spring-study/kimyounghan-spring.git
+    ```
+5. 공부한 내용을 자신의 로컬 저장소에 Commit, Push 합니다.
+   ```
+   git add .
+   git commit -m "[{해당 강의]]: {주차} - {섹션명} // [기본편]: 1주차 - 섹션1. 객체 지향 설계와 스프링
+   ```
+7. 한 주간 공부한 내역으로 원본 저장소에서 Pull Request를 작성합니다. (원본 저장소 <- 본인의 로컬 저장소)
+8. Merge 합니다.
+9. 본인의 로컬 저장소 sync를 확인합니다.
