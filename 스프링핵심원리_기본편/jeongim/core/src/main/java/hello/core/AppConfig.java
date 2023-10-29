@@ -18,16 +18,19 @@ public class AppConfig {
     // @Bean 어노테이션 : 해당 메소드를 스프링 컨테이너에 등록
     @Bean
     public MemberService memberService() {
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
-    public static MemberRepository memberRepository() {
+    public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService() {
+        System.out.println("call $AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
@@ -36,4 +39,5 @@ public class AppConfig {
         //return new FixDiscountPolicy();
         return new RateDiscountPolicy();
     }
+
 }

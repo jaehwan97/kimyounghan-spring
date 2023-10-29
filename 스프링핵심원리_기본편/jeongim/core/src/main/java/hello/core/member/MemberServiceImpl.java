@@ -20,4 +20,12 @@ public class MemberServiceImpl implements MemberService{
     public Member findMember(Long memberId) {
         return memberRepository.findById(memberId);
     }
+
+
+    // cmd + o = 파일 찾는 단축키
+    // 테스트 용
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
+
 }

@@ -26,6 +26,12 @@ public class OrderServiceImpl implements OrderService{
 
         return new Order(memberId, itemName, itemPrice, disCountPrice);
     }
+
+    // 테스트 용
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
+
 }
 
 //command shift enter => 자동완성
